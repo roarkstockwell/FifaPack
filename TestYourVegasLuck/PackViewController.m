@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"GrassTexture"]];
+    
     UIImage *display = [UIImage imageNamed:self.imageName];
     self.playerImage.image = display;
     self.rarityLabel.text = self.rarityString;
