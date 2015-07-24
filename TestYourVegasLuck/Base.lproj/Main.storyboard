@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIG-QA-EkE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TiW-fs-pEU">
+            <objects>
+                <navigationController id="pIG-QA-EkE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QbJ-qJ-Ox7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ppv-7t-ZYQ" kind="relationship" relationship="rootViewController" id="BhE-sg-aoq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fK-ia-OV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="402"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vJS-dT-PBu">
+            <objects>
+                <viewController id="ppv-7t-ZYQ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lwg-0N-cF8"/>
+                        <viewControllerLayoutGuide type="bottom" id="7q8-TL-5lZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzw-B4-jhU" customClass="V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-0G-6vT">
+                                <rect key="frame" x="40" y="196" width="520" height="208"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="1 / 12 Chance of Getting a Good Card!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LB6-r4-zBf" kind="show" identifier="openPackSegue" id="YRI-Al-52r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eDZ-0G-6vT" firstAttribute="leading" secondItem="fzw-B4-jhU" secondAttribute="leadingMargin" constant="24" id="FfD-48-ULL"/>
+                            <constraint firstItem="eDZ-0G-6vT" firstAttribute="centerX" secondItem="fzw-B4-jhU" secondAttribute="centerX" id="HEp-PM-1Hi"/>
+                            <constraint firstItem="eDZ-0G-6vT" firstAttribute="centerY" secondItem="fzw-B4-jhU" secondAttribute="centerY" id="Wii-Lt-dgb"/>
+                            <constraint firstItem="eDZ-0G-6vT" firstAttribute="top" secondItem="lwg-0N-cF8" secondAttribute="bottom" constant="132" id="cir-er-uYW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZLE-Ol-YjW"/>
+                    <connections>
+                        <outlet property="packLuckButton" destination="eDZ-0G-6vT" id="HvK-bH-Z12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cI-wE-MvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="402"/>
+        </scene>
+        <!--Pack View Controller-->
+        <scene sceneID="UMV-VY-MTu">
+            <objects>
+                <viewController id="LB6-r4-zBf" customClass="PackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5C2-e4-aIz"/>
+                        <viewControllerLayoutGuide type="bottom" id="5iF-7Z-qZc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xMB-26-hf9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD1-AG-Udz">
+                                <rect key="frame" x="117" y="127" width="366" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="366" id="979-2h-oo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u10-yy-pjP">
+                                <rect key="frame" x="167" y="174" width="248" height="307"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="RAm-G0-aaG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u10-yy-pjP" firstAttribute="centerX" secondItem="xMB-26-hf9" secondAttribute="centerX" constant="-9" id="1iQ-bc-hV5"/>
+                            <constraint firstItem="aD1-AG-Udz" firstAttribute="centerX" secondItem="u10-yy-pjP" secondAttribute="centerX" constant="9" id="KnB-YJ-mgS"/>
+                            <constraint firstItem="u10-yy-pjP" firstAttribute="top" secondItem="aD1-AG-Udz" secondAttribute="bottom" constant="26" id="L7m-Tp-or0"/>
+                            <constraint firstItem="aD1-AG-Udz" firstAttribute="top" secondItem="5C2-e4-aIz" secondAttribute="bottom" constant="63" id="SKw-kZ-g6p"/>
+                            <constraint firstItem="5iF-7Z-qZc" firstAttribute="top" secondItem="u10-yy-pjP" secondAttribute="bottom" constant="119" id="z9X-9b-Nvg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerImage" destination="u10-yy-pjP" id="4SU-BB-P3b"/>
+                        <outlet property="rarityLabel" destination="aD1-AG-Udz" id="Qnl-Zx-bRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4w4-tQ-7e0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="397"/>
+        </scene>
+    </scenes>
+</document>
